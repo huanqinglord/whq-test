@@ -16,6 +16,14 @@ public class Friends {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
     public class FriendSter{
         private String friendSterName;
 

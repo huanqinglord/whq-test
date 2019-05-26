@@ -38,7 +38,19 @@ public class TestStack {
         print(stackWhq.peek());
         //获取容器中的元素的顺序为9~0
         while (!stackWhq.storage.isEmpty()){
+            //poll方法会移除元素
             printnb(stackWhq.pop());
         }
+        print();
+        //通过poll方法移除第一个元素后查看集合元素
+        if(stackWhq.storage.size() == 0){
+            print("NoSuchElements in stackWhq!");
+        }else {
+            for (Integer i: stackWhq.storage
+                    ) {
+                printnb(i);
+            }
+        }
+
     }
 }

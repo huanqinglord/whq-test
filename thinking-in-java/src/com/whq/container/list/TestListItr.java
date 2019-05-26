@@ -40,6 +40,15 @@ public class TestListItr {
 
         //以下通过listIterator方法顺序遍历list集合中的元素
         ListIterator listIterator = list.listIterator();
+        /*while (listIterator.hasNext()){
+            //此处不取出元素将会无限循环
+            System.out.println("无限循环？");
+        }*/
+        //以下不会执行，正如testListIterator()方法中注释所说，之所以后面的逆序查看可以，
+        //是因为在之前做了一个顺序遍历，修改了集合中的cursor变量
+        while (listIterator.hasPrevious()){
+            System.out.println("逆序查看结果！");
+        }
         while (listIterator.hasNext()){
             Object obj = listIterator.next();
             printnb(obj);
